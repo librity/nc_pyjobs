@@ -59,12 +59,14 @@ This project is [MIT licensed](LICENSE).
 ### Python
 
 - https://www.python.org/
+- https://wiki.python.org/moin/BeginnersGuide
 - https://www.upgrad.com/blog/python-cheat-sheet/
 - https://www.w3schools.com/python/python_booleans.asp
 - https://www.w3schools.com/python/python_lists.asp
 - https://www.w3schools.com/python/python_tuples.asp
 - https://www.w3schools.com/python/python_dictionaries.asp
 - https://namingconvention.org/python/
+- https://www.geeksforgeeks.org/template-class-in-python/
 
 ### Style Guide
 
