@@ -53,6 +53,7 @@ This project is [MIT licensed](LICENSE).
 ## Docs <a name = "docs"></a>
 
 - https://docs.python.org/3.9/
+- https://docs.python.org/3/library/index.html
 
 ## Resources <a name = "resources"></a>
 
@@ -67,6 +68,7 @@ This project is [MIT licensed](LICENSE).
 - https://www.w3schools.com/python/python_dictionaries.asp
 - https://namingconvention.org/python/
 - https://www.geeksforgeeks.org/template-class-in-python/
+- https://stackoverflow.com/questions/69447823/how-to-convert-array-to-string-in-python
 
 ### Style Guide
 
