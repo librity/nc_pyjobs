@@ -1,7 +1,5 @@
 # python3 theory/variables.py
 
-from string import Template
-
 
 print("=== Integers ===")
 a_int = 2
@@ -28,13 +26,13 @@ age = "19"
 print("My name is " + name + " and I am " + age + " years old.")
 print("My name is", name, "and I am",  age, "years old.")
 
-
-print()
-print("=== Templates ===")
-a_template = Template('My name is ${name} and I am ${age} years old.')
-print(type(a_template))
-greeting = a_template.substitute(name=name, age=age)
-print(greeting)
+# from string import Template
+# print()
+# print("=== Templates ===")
+# a_template = Template('My name is ${name} and I am ${age} years old.')
+# print(type(a_template))
+# greeting = a_template.substitute(name=name, age=age)
+# print(greeting)
 
 print()
 print("=== Booleans ===")

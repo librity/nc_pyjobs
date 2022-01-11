@@ -66,9 +66,14 @@ This project is [MIT licensed](LICENSE).
 - https://www.w3schools.com/python/python_lists.asp
 - https://www.w3schools.com/python/python_tuples.asp
 - https://www.w3schools.com/python/python_dictionaries.asp
+- https://www.w3schools.com/python/gloss_python_remove_list_items.asp
+- https://www.w3schools.com/python/python_classes.asp
 - https://namingconvention.org/python/
 - https://www.geeksforgeeks.org/template-class-in-python/
+- https://www.geeksforgeeks.org/private-methods-in-python/
 - https://stackoverflow.com/questions/69447823/how-to-convert-array-to-string-in-python
+- https://blog.finxter.com/python-one-line-return-if/
+- https://chercher.tech/python-questions/check-number-integer-python-questions
 
 ### Style Guide
 
