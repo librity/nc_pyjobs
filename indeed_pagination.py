@@ -1,8 +1,8 @@
 from requests import get
 from bs4 import BeautifulSoup
-from pprint import pprint
 
-DEBUG = False
+
+from debug import log_debug
 
 
 def build_url(query, start):
@@ -19,36 +19,33 @@ def get_pagination_links(url):
   return pagination_links
 
 
-def extract_pagination(pagination_links):
-  pagination = []
+def extract_page_numbers(pagination_links):
+  page_numbers = []
 
-  for pagination_link in pagination_links:
-    pagination_span = pagination_link.find("span")
+  for link in pagination_links:
+    log_debug(link)
 
-    if DEBUG:
-      pprint(pagination_span)
-
-    if pagination_span.text == '':
+    page_str = link.text
+    if page_str == '':
       continue
 
     try:
-      pagination_number = int(pagination_span.text)
-      pagination.append(pagination_number)
+      page_number = int(page_str)
+      page_numbers.append(page_number)
 
     except:
-      if DEBUG:
-        print(f"Couldn't parse int from span: \"{pagination_span}\"")
+      print(f"Couldn't parse page number from: \"{link}\"")
       continue
 
-  return pagination
+  return page_numbers
 
 
 def get_last_page(query, start):
   url = build_url(query, start)
   pagination_links = get_pagination_links(url)
-  pagination = extract_pagination(pagination_links)
-  last_page = max(pagination)
+  page_numbers = extract_page_numbers(pagination_links)
 
+  last_page = max(page_numbers)
   return last_page
 
 
