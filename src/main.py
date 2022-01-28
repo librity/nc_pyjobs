@@ -1,12 +1,16 @@
 import globals
 
 
-from indeed_pagination import get_last_page
+from indeed_scraper import scrape as scrape_indeed
 
 
 def main():
   globals.initialize()
-  print(get_last_page("python", 900))
+
+  query = "python"
+
+  indeed_jobs = scrape_indeed(query)
+  print(indeed_jobs)
 
 
 if __name__ == "__main__":

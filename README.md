@@ -15,7 +15,7 @@
 
 ## About <a name = "about"></a>
 
-A job scrapper in Python.
+A job scraper in Python.
 
 - [Take the course too!](https://nomadcoders.co/python-for-beginners)
 - [Certificate of Completion]()

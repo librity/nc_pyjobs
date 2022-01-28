@@ -3,10 +3,7 @@ from bs4 import BeautifulSoup
 
 
 from debug import log_debug
-
-
-def build_url(query, start):
-  return f"https://www.indeed.com/jobs?q={query}&start={start}&limit=50"
+from indeed import build_url
 
 
 def get_pagination_links(url):
