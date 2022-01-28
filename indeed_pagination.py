@@ -37,7 +37,7 @@ def extract_pagination(pagination_links):
 
     except:
       if DEBUG:
-        print(f"Couldn't parse span: \"{pagination_span}\"")
+        print(f"Couldn't parse int from span: \"{pagination_span}\"")
       continue
 
   return pagination
@@ -49,4 +49,15 @@ def get_last_page(query, start):
   pagination = extract_pagination(pagination_links)
   last_page = max(pagination)
 
+  return last_page
+
+
+def get_last_page_from_sample(query):
+  last_pages = []
+
+  for sample in range(0, 1101, 100):
+    sample_result = get_last_page(query, sample)
+    last_pages.append(sample_result)
+
+  last_page = max(last_pages)
   return last_page

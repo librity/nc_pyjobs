@@ -1,4 +1,4 @@
-from indeed_pagination import get_last_page
+from indeed_pagination import get_last_page_from_sample
 
 
-print(get_last_page("python", 901))
+print(get_last_page_from_sample("python"))
