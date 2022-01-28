@@ -54,6 +54,10 @@ This project is [MIT licensed](LICENSE).
 
 - https://docs.python.org/3.9/
 - https://docs.python.org/3/library/index.html
+- [math - Mathematical functions](https://docs.python.org/3/library/math.html)
+- [datetime - Basic date and time types](https://docs.python.org/3/library/datetime.html)
+- [csv - CSV File Reading and Writing](https://docs.python.org/3/library/csv.html)
+- [json - JSON encoder and decoder](https://docs.python.org/3/library/json.html)
 
 ## Resources <a name = "resources"></a>
 
