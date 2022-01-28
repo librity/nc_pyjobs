@@ -38,10 +38,10 @@ print()
 print("=== Booleans ===")
 a_boolean = True
 if(a_boolean):
-    print(a_boolean)
+  print(a_boolean)
 a_boolean = False
 if(a_boolean):
-    print(a_boolean)
+  print(a_boolean)
 print(type(a_boolean))
 
 
@@ -50,5 +50,5 @@ print("=== None ===")
 print("Like ruby's nil")
 a_none = None
 if(a_none):
-    print(a_none)
+  print(a_none)
 print(type(a_none))

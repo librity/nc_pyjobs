@@ -19,7 +19,7 @@ print("=== User-defined ===")
 
 
 def say_hello():
-    print("hello")
+  print("hello")
 
 
 say_hello()
@@ -28,7 +28,7 @@ print(type(say_hello))
 
 
 def greet(name="buddy!"):
-    print("Hello", name)
+  print("Hello", name)
 
 
 greet("Luis")
@@ -38,11 +38,11 @@ print(greet())
 
 
 def plus(a, b):
-    return a + b
+  return a + b
 
 
 def minus(a, b=42):
-    return a - b
+  return a - b
 
 
 print(plus(21, 21))
@@ -52,12 +52,12 @@ print(plus(b=18, a=24))
 
 
 def join_line_break(list):
-    return "\n".join(str(x) for x in list)
+  return "\n".join(str(x) for x in list)
 
 
 def greet_2(name="pal", age=21, country="Brazil", fav_foods=["pizza", "doritos"]):
-    pretty_foods = join_line_break(fav_foods)
-    return f"Hello {name}, you are {age} years old!\nYou live in {country} and you love:\n{pretty_foods}\n"
+  pretty_foods = join_line_break(fav_foods)
+  return f"Hello {name}, you are {age} years old!\nYou live in {country} and you love:\n{pretty_foods}\n"
 
 
 print(greet_2("Luis", 19, "Thayland", [
