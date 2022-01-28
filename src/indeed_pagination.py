@@ -2,7 +2,6 @@ from requests import get
 from bs4 import BeautifulSoup
 
 
-from debug import log_debug
 from indeed import build_url
 
 
@@ -20,8 +19,6 @@ def extract_page_numbers(pagination_links):
   page_numbers = []
 
   for link in pagination_links:
-    log_debug(link)
-
     page_str = link.text
     if page_str == '':
       continue

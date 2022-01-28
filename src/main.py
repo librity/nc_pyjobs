@@ -1,17 +1,12 @@
 import globals
-
-
-from indeed_scraper import scrape as scrape_indeed
+from indeed_scraper import scrape_to_csv as scrape_indeed
 
 
 def main():
-  globals.initialize()
-
   query = "python"
-
-  indeed_jobs = scrape_indeed(query)
-  print(indeed_jobs)
+  scrape_indeed(query)
 
 
 if __name__ == "__main__":
+  globals.initialize()
   main()

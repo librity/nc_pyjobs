@@ -86,6 +86,7 @@ This project is [MIT licensed](LICENSE).
 - https://blog.finxter.com/python-one-line-return-if/
 - https://chercher.tech/python-questions/check-number-integer-python-questions
 - https://instructobit.com/tutorial/108/How-to-share-global-variables-between-files-in-Python
+- https://pynative.com/python-timestamp/
 
 ### W3 Schools
 
@@ -104,6 +105,8 @@ This project is [MIT licensed](LICENSE).
 - https://stackoverflow.com/questions/54430470/vs-code-python-autopep8-does-not-honor-2-spaces-hanging-indentation
 - https://stackoverflow.com/questions/3553740/what-is-the-python-equivalent-of-rubys-inspect
 - https://stackoverflow.com/questions/37848340/how-to-skip-a-single-loop-iteration-in-python
+- https://stackoverflow.com/questions/11264684/flatten-list-of-lists
+- https://stackoverflow.com/questions/3086973/how-do-i-convert-this-list-of-dictionaries-to-a-csv-file
 
 ### Geeks for Geeks
 
