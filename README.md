@@ -68,6 +68,7 @@ This project is [MIT licensed](LICENSE).
 - https://www.w3schools.com/python/python_dictionaries.asp
 - https://www.w3schools.com/python/gloss_python_remove_list_items.asp
 - https://www.w3schools.com/python/python_classes.asp
+- https://www.w3schools.com/python/module_math.asp
 - https://namingconvention.org/python/
 - https://www.geeksforgeeks.org/template-class-in-python/
 - https://www.geeksforgeeks.org/private-methods-in-python/
