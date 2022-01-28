@@ -39,7 +39,7 @@ $ pip install requests beautifulsoup4
 2. Run `main.py` with `python3`:
 
 ```bash
-$ python3 main.py
+$ python3 src/main.py
 ```
 
 ### Format
@@ -85,6 +85,10 @@ This project is [MIT licensed](LICENSE).
 - https://namingconvention.org/python/
 - https://blog.finxter.com/python-one-line-return-if/
 - https://chercher.tech/python-questions/check-number-integer-python-questions
+- https://instructobit.com/tutorial/108/How-to-share-global-variables-between-files-in-Python
+
+### W3 Schools
+
 - https://www.w3schools.com/python/python_booleans.asp
 - https://www.w3schools.com/python/python_lists.asp
 - https://www.w3schools.com/python/python_tuples.asp
@@ -92,11 +96,17 @@ This project is [MIT licensed](LICENSE).
 - https://www.w3schools.com/python/gloss_python_remove_list_items.asp
 - https://www.w3schools.com/python/python_classes.asp
 - https://www.w3schools.com/python/module_math.asp
+
+### Stack Overflow
+
 - https://stackoverflow.com/questions/69447823/how-to-convert-array-to-string-in-python
 - https://stackoverflow.com/questions/52665596/equivalent-of-package-json-and-package-lock-json-for-pip
 - https://stackoverflow.com/questions/54430470/vs-code-python-autopep8-does-not-honor-2-spaces-hanging-indentation
 - https://stackoverflow.com/questions/3553740/what-is-the-python-equivalent-of-rubys-inspect
 - https://stackoverflow.com/questions/37848340/how-to-skip-a-single-loop-iteration-in-python
+
+### Geeks for Geeks
+
 - https://www.geeksforgeeks.org/template-class-in-python/
 - https://www.geeksforgeeks.org/private-methods-in-python/
 - https://www.geeksforgeeks.org/python-program-to-find-largest-number-in-a-list/

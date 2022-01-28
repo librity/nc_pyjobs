@@ -4,4 +4,4 @@ def initialize():
 
 def init_debug():
   global DEBUG
-  DEBUG = True
+  DEBUG = False
