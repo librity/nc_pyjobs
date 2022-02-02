@@ -2,11 +2,12 @@ from requests import get
 from bs4 import BeautifulSoup
 
 
+import globals
 from indeed import build_url
 
 
 def get_pagination_links(url):
-  indeed_req = get(url)
+  indeed_req = get(url, headers=globals.DEFAULT_HEADERS)
 
   soup = BeautifulSoup(indeed_req.text, "html.parser")
   pagination = soup.find("ul", {"class": "pagination-list"})

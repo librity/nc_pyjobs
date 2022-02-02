@@ -107,6 +107,7 @@ This project is [MIT licensed](LICENSE).
 - https://stackoverflow.com/questions/37848340/how-to-skip-a-single-loop-iteration-in-python
 - https://stackoverflow.com/questions/11264684/flatten-list-of-lists
 - https://stackoverflow.com/questions/3086973/how-do-i-convert-this-list-of-dictionaries-to-a-csv-file
+- https://stackoverflow.com/questions/60171502/requests-get-is-very-slow
 
 ### Geeks for Geeks
 

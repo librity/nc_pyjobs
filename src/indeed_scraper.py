@@ -8,12 +8,14 @@ from indeed_pagination import get_last_page
 from indeed import BASE_URL, LIMIT, build_url
 
 
-START = 900
+MAX_START = 900
 
 
 def get_title(job):
   title_h2 = job.find('h2', {"class": "jobTitle"})
-  return title_h2.text
+  last_span = title_h2.contents[-1]
+  title = last_span['title']
+  return title
 
 
 def get_company(job):
@@ -53,7 +55,7 @@ def get_page_jobs(query, page_number):
   url = build_url(query, LIMIT * page_number)
   print(f"⛏️  Scrapping jobs from: {url}")
 
-  indeed_req = get(url)
+  indeed_req = get(url, headers=globals.DEFAULT_HEADERS)
 
   soup = BeautifulSoup(indeed_req.text, "html.parser")
   page_jobs = soup.find_all("a", {"class": "result"})
@@ -64,10 +66,11 @@ def get_page_jobs(query, page_number):
 def scrape(query):
   print(f"🧑‍💻 Scrapping {BASE_URL} for {query} jobs")
 
-  last_page = get_last_page(query, START)
+  last_page = get_last_page(query, MAX_START)
   print(f"🔎 Found {last_page} page(s) of jobs")
 
   page_numbers = range(0, last_page)
+  # page_numbers = range(0, 1)
   jobs = []
 
   for page_number in page_numbers:
@@ -81,7 +84,7 @@ def scrape(query):
 
 
 def build_filepath(query):
-  return f"{globals.scrapes_path}/indeed_{query}_{now()}.csv"
+  return f"{globals.SCRAPES_PATH}/indeed_{query}_{now()}.csv"
 
 
 def scrape_to_csv(query):

@@ -1,6 +1,7 @@
 def initialize():
   init_debug()
   init_scrapes_path()
+  init_request_headers()
 
 
 def init_debug():
@@ -9,5 +10,12 @@ def init_debug():
 
 
 def init_scrapes_path():
-  global scrapes_path
-  scrapes_path = "./scrapes"
+  global SCRAPES_PATH
+  SCRAPES_PATH = "./scrapes"
+
+
+def init_request_headers():
+  global DEFAULT_HEADERS
+  DEFAULT_HEADERS = {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'
+  }
