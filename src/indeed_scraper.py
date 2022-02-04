@@ -45,7 +45,6 @@ def format_job(job):
       "title": get_title(job),
       "company": get_company(job),
       "location": get_location(job),
-      "salary": get_salary(job),
       "link": get_link(job),
   }
 

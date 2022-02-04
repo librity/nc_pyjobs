@@ -1,4 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
+
+
+from scraper import scrape
 
 
 app = Flask("pyjobs")
@@ -12,6 +15,13 @@ def home():
 @app.route("/scrapes")
 def scrapes():
   query = request.args.get("query")
+  if query is "":
+    return redirect("/")
+  if query is None:
+    return redirect("/")
+
+  query = query.lower()
+  jobs = scrape(query)
 
   return render_template("scrapes.html", query=query)
 
