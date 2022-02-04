@@ -72,6 +72,7 @@ This project is [MIT licensed](LICENSE).
 - https://github.com/psf/black
 - https://github.com/psf/requests
 - https://www.crummy.com/software/BeautifulSoup/
+- https://github.com/django/django
 
 ## Docs <a name = "docs"></a>
 
@@ -95,6 +96,7 @@ This project is [MIT licensed](LICENSE).
 - https://instructobit.com/tutorial/108/How-to-share-global-variables-between-files-in-Python
 - https://pynative.com/python-timestamp/
 - https://www.educba.com/python-async/
+- https://www.javatpoint.com/python-join-list
 
 ### W3 Schools
 
@@ -105,6 +107,7 @@ This project is [MIT licensed](LICENSE).
 - https://www.w3schools.com/python/gloss_python_remove_list_items.asp
 - https://www.w3schools.com/python/python_classes.asp
 - https://www.w3schools.com/python/module_math.asp
+- https://www.w3schools.com/python/python_inheritance.asp
 
 ### Stack Overflow
 
@@ -116,12 +119,18 @@ This project is [MIT licensed](LICENSE).
 - https://stackoverflow.com/questions/11264684/flatten-list-of-lists
 - https://stackoverflow.com/questions/3086973/how-do-i-convert-this-list-of-dictionaries-to-a-csv-file
 - https://stackoverflow.com/questions/60171502/requests-get-is-very-slow
+- https://stackoverflow.com/questions/51568874/how-to-create-string-with-line-breaks-in-python
+- https://stackoverflow.com/questions/46471418/replace-only-first-line-of-text-file-in-python
 
 ### Geeks for Geeks
 
 - https://www.geeksforgeeks.org/template-class-in-python/
 - https://www.geeksforgeeks.org/private-methods-in-python/
 - https://www.geeksforgeeks.org/python-program-to-find-largest-number-in-a-list/
+
+### Django
+
+- https://www.djangoproject.com/
 
 ### Targets
 

@@ -19,14 +19,14 @@ def get_company(job):
   company_and_location = job.find('h3', {"class": "fc-black-700"})
   company_span = company_and_location.find_all("span")[0]
 
-  return company_span.text.strip()
+  return company_span.get_text(strip=True)
 
 
 def get_location(job):
   company_and_location = job.find('h3', {"class": "fc-black-700"})
   location_span = company_and_location.find_all("span")[-1]
 
-  return location_span.text.strip()
+  return location_span.get_text(strip=True)
 
 
 def get_link(job):
