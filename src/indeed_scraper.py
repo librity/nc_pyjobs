@@ -1,11 +1,10 @@
 from requests import get
 from bs4 import BeautifulSoup
-from csv import DictWriter
 
 import globals
-from utils import now
 from indeed_pagination import get_last_page
 from indeed import BASE_URL, LIMIT, build_url
+from save_to_csv import save_to_csv
 
 
 MAX_START = 900
@@ -70,7 +69,6 @@ def scrape(query):
   print(f"🔎 Found {last_page} page(s) of jobs")
 
   page_numbers = range(0, last_page)
-  # page_numbers = range(0, 1)
   jobs = []
 
   for page_number in page_numbers:
@@ -87,14 +85,11 @@ def build_filepath(query):
   return f"{globals.SCRAPES_PATH}/indeed_{query}_{now()}.csv"
 
 
+def build_prefix(query):
+  return f"indeed_{query}"
+
+
 def scrape_to_csv(query):
   jobs = scrape(query)
-  keys = jobs[0].keys()
-  filepath = build_filepath(query)
-
-  with open(filepath, 'w', newline='') as output_file:
-    dict_writer = DictWriter(output_file, keys)
-    dict_writer.writeheader()
-    dict_writer.writerows(jobs)
-
-  print(f"💾 Saved scrape results to {filepath}")
+  prefix = build_prefix(query)
+  save_to_csv(prefix, jobs)
