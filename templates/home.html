@@ -3,27 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
+    <!--
+      <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
+      />
+    -->
+    <link
+      rel="stylesheet"
+      href="https://minicss.org/flavorFiles/mini-nord.min.css"
     />
 
     <title>PyJobs - Home</title>
   </head>
   <body>
     <main>
-      <section>
-        <h1>PyJobs - The job scraper for the unemployed masses</h1>
+      <h1>
+        PyJobs
+        <small>The job scraper for the unemployed masses</small>
+      </h1>
 
+      <section>
         <form action="/scrapes" method="get">
           <div class="container">
             <div class="row">
               <input
                 class="col-sm-9"
                 name="query"
-                placeholder="Type in a tech or programming language"
+                placeholder="Type a tech or programming language"
                 required
               />
 

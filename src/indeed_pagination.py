@@ -36,6 +36,9 @@ def extract_page_numbers(pagination_links):
 
 
 def get_last_page(query, start):
+  if globals.QUICK:
+    return 1
+
   url = build_url(query, start)
   pagination_links = get_pagination_links(url)
   page_numbers = extract_page_numbers(pagination_links)

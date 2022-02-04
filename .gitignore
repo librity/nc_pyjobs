@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# # Scrape results
-# scrapes/*
+# Scrape results
+scrapes/*

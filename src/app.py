@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 
 
+import globals
 from scraper import scrape
 
 
@@ -21,9 +22,15 @@ def scrapes():
     return redirect("/")
 
   query = query.lower()
-  jobs = scrape(query)
+  cached_jobs = globals.jobs_cache.get(query)
+  if cached_jobs:
+    job_count = len(cached_jobs)
+    return render_template("scrapes.html", query=query, jobs=cached_jobs, job_count=job_count)
 
-  return render_template("scrapes.html", query=query)
+  scraped_jobs = scrape(query)
+  globals.jobs_cache[query] = scraped_jobs
+  job_count = len(scraped_jobs)
+  return render_template("scrapes.html", query=query, jobs=scraped_jobs, job_count=job_count)
 
 
 @app.route("/greet/<name>")

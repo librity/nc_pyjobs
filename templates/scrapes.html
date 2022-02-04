@@ -3,19 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
+    <!--
+      <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
+      />
+    -->
+    <link
+      rel="stylesheet"
+      href="https://minicss.org/flavorFiles/mini-nord.min.css"
     />
 
     <title>PyJobs - {{query}} jobs</title>
   </head>
   <body>
     <main>
+      <h1>
+        PyJobs - Scrape results for {{query}} jobs
+        <small>{{job_count}} jobs found</small>
+      </h1>
+
       <section>
-        <h1>PyJobs - Scrape results for {{query}} jobs</h1>
+        <table class="hoverable" style="max-height: none">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Company</th>
+              <th>Location</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for job in jobs %}
+            <tr>
+              <td data-label="Title">{{job.title}}</td>
+              <td data-label="Company">{{job.company}}</td>
+              <td data-label="Location">{{job.location}}</td>
+              <td data-label="Link">
+                <a href="{{job.link}}" target="_blank">Apply</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
       </section>
     </main>
   </body>

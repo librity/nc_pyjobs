@@ -148,6 +148,10 @@ This project is [MIT licensed](LICENSE).
 - https://www.djangoproject.com/
 - https://github.com/django/django
 
+### HTML
+
+- https://www.w3schools.com/html/html_tables.asp
+
 ### CSS
 
 - https://minicss.org/
