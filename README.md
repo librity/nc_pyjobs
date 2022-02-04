@@ -40,7 +40,7 @@ A job scraper in Python.
 ```bash
 $ git clone https://github.com/librity/nc_pyjobs.git
 $ cd nc_pyjobs
-$ pip install requests beautifulsoup4
+$ pip install requests beautifulsoup4 Flask
 ```
 
 2. Run `main.py` with `python3`:
@@ -72,7 +72,7 @@ This project is [MIT licensed](LICENSE).
 - https://github.com/psf/black
 - https://github.com/psf/requests
 - https://www.crummy.com/software/BeautifulSoup/
-- https://github.com/django/django
+- https://github.com/pallets/flask
 
 ## Docs <a name = "docs"></a>
 
@@ -82,6 +82,7 @@ This project is [MIT licensed](LICENSE).
 - [datetime - Basic date and time types](https://docs.python.org/3/library/datetime.html)
 - [csv - CSV File Reading and Writing](https://docs.python.org/3/library/csv.html)
 - [json - JSON encoder and decoder](https://docs.python.org/3/library/json.html)
+- https://flask.palletsprojects.com/en/2.0.x/
 
 ## Resources <a name = "resources"></a>
 
@@ -128,10 +129,6 @@ This project is [MIT licensed](LICENSE).
 - https://www.geeksforgeeks.org/private-methods-in-python/
 - https://www.geeksforgeeks.org/python-program-to-find-largest-number-in-a-list/
 
-### Django
-
-- https://www.djangoproject.com/
-
 ### Targets
 
 - https://stackoverflow.com/jobs
@@ -141,3 +138,12 @@ This project is [MIT licensed](LICENSE).
 
 - https://www.python.org/dev/peps/pep-0008/?
 - https://books.agiliq.com/projects/essential-python-tools/en/latest/linters.html
+
+### Flask
+
+- https://palletsprojects.com/p/flask/
+
+### Django
+
+- https://www.djangoproject.com/
+- https://github.com/django/django

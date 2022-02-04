@@ -1,12 +1,9 @@
 import globals
-from indeed_scraper import scrape_to_csv as scrape_indeed
-from so_scraper import scrape_to_csv as scrape_stack_overflow
+from app import app
 
 
 def main():
-  query = "python"
-  # scrape_indeed(query)
-  scrape_stack_overflow(query)
+  app.run()
 
 
 if __name__ == "__main__":
