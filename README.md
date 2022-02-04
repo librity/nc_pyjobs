@@ -20,6 +20,13 @@ A job scraper in Python.
 - [Take the course too!](https://nomadcoders.co/python-for-beginners)
 - [Certificate of Completion]()
 
+## Features
+
+- [x] Scrape Indeed jobs
+- [x] Scrape Stack Overflow jobs
+- [x] Save to `.csv`
+- [ ] Run scrapes asynchronously
+
 ## Getting Started <a name = "getting_started"></a>
 
 ### Prerequisites
@@ -87,6 +94,7 @@ This project is [MIT licensed](LICENSE).
 - https://chercher.tech/python-questions/check-number-integer-python-questions
 - https://instructobit.com/tutorial/108/How-to-share-global-variables-between-files-in-Python
 - https://pynative.com/python-timestamp/
+- https://www.educba.com/python-async/
 
 ### W3 Schools
 

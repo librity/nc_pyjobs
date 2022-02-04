@@ -5,7 +5,7 @@ from so_scraper import scrape_to_csv as scrape_stack_overflow
 
 def main():
   query = "python"
-  # scrape_indeed(query)
+  scrape_indeed(query)
   scrape_stack_overflow(query)
 
 
