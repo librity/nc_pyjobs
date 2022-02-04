@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
+    />
+
+    <title>PyJobs</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>PyJobs - The job scraper for the unemployed masses</h1>
+
+        <form action="/scrapes" method="get">
+          <div class="container">
+            <div class="row">
+              <input
+                class="col-sm-9"
+                name="query"
+                placeholder="Type in a tech or programming language"
+                required
+              />
+
+              <div class="col-sm-2">
+                <button>Scrape!</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

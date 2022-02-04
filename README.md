@@ -147,3 +147,7 @@ This project is [MIT licensed](LICENSE).
 
 - https://www.djangoproject.com/
 - https://github.com/django/django
+
+### CSS
+
+- https://minicss.org/
