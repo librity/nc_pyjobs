@@ -2,8 +2,8 @@ from requests import get
 from bs4 import BeautifulSoup
 
 import globals
-from indeed_pagination import get_last_page
-from indeed import BASE_URL, LIMIT, build_url
+from so_pagination import get_last_page
+from so import BASE_URL, build_url
 from save_to_csv import save_to_csv
 
 
@@ -11,33 +11,27 @@ MAX_START = 900
 
 
 def get_title(job):
-  title_h2 = job.find('h2', {"class": "jobTitle"})
-  last_span = title_h2.contents[-1]
-  title = last_span['title']
-  return title
+  title_a = job.find('a', {"class": "s-link"})
+  return title_a['title']
 
 
 def get_company(job):
-  company_span = job.find('span', {"class": "companyName"})
-  return company_span.text
+  company_and_location = job.find('h3', {"class": "fc-black-700"})
+  company_span = company_and_location.find_all("span")[0]
+
+  return company_span.text.strip()
 
 
 def get_location(job):
-  location_div = job.find('div', {"class": "companyLocation"})
-  return location_div.text
+  company_and_location = job.find('h3', {"class": "fc-black-700"})
+  location_span = company_and_location.find_all("span")[-1]
 
-
-def get_salary(job):
-  salary_div = job.find('div', {"class": "salaryOnly"})
-  if salary_div == None:
-    return "N/A"
-
-  return salary_div.text
+  return location_span.text.strip()
 
 
 def get_link(job):
-  endpoint = job.get('href')
-  return f"{BASE_URL}{endpoint}"
+  job_id = job['data-result-id']
+  return f"{BASE_URL}/jobs/{job_id}"
 
 
 def format_job(job):
@@ -45,19 +39,18 @@ def format_job(job):
       "title": get_title(job),
       "company": get_company(job),
       "location": get_location(job),
-      "salary": get_salary(job),
       "link": get_link(job),
   }
 
 
 def get_page_jobs(query, page_number):
-  url = build_url(query, LIMIT * page_number)
+  url = build_url(query, page_number)
   print(f"⛏️  Scrapping jobs from: {url}")
 
   indeed_req = get(url, headers=globals.DEFAULT_HEADERS)
 
   soup = BeautifulSoup(indeed_req.text, "html.parser")
-  page_jobs = soup.find_all("a", {"class": "result"})
+  page_jobs = soup.find_all("div", {"class": "-job"})
 
   return page_jobs
 
@@ -65,10 +58,10 @@ def get_page_jobs(query, page_number):
 def scrape(query):
   print(f"🧑‍💻 Scrapping {BASE_URL} for {query} jobs")
 
-  last_page = get_last_page(query, MAX_START)
+  last_page = get_last_page(query)
   print(f"🔎 Found {last_page} page(s) of jobs")
 
-  page_numbers = range(0, last_page)
+  page_numbers = range(1, last_page + 1)
   jobs = []
 
   for page_number in page_numbers:
@@ -82,7 +75,7 @@ def scrape(query):
 
 
 def build_prefix(query):
-  return f"indeed_{query}"
+  return f"stack_overflow_{query}"
 
 
 def scrape_to_csv(query):
