@@ -18,13 +18,15 @@
 A job scraper in Python.
 
 - [Take the course too!](https://nomadcoders.co/python-for-beginners)
-- [Certificate of Completion]()
+- [Certificate of Completion](https://nomadcoders.co/certs/8cfa24cf-e9c3-4822-b2d2-aff68f3cbaa8)
 
 ## Features
 
 - [x] Scrape Indeed jobs
 - [x] Scrape Stack Overflow jobs
 - [x] Save to `.csv`
+- [x] Scrape from Flask web app
+- [x] Deploy on Heroku
 - [ ] Run scrapes asynchronously
 
 ## Getting Started <a name = "getting_started"></a>
@@ -43,11 +45,13 @@ $ cd nc_pyjobs
 $ pip install requests beautifulsoup4 Flask
 ```
 
-2. Run `main.py` with `python3`:
+2. Run `wsgi.py` with `python3`:
 
 ```bash
-$ python3 src/main.py
+$ python3 wsgi.py
 ```
+
+3. Open http://localhost:5000/ on your web browser.
 
 ### Format
 
@@ -73,6 +77,7 @@ This project is [MIT licensed](LICENSE).
 - https://github.com/psf/requests
 - https://www.crummy.com/software/BeautifulSoup/
 - https://github.com/pallets/flask
+- https://github.com/benoitc/gunicorn
 
 ## Docs <a name = "docs"></a>
 
@@ -155,3 +160,7 @@ This project is [MIT licensed](LICENSE).
 ### CSS
 
 - https://minicss.org/
+
+### Heroku
+
+- https://www.geeksforgeeks.org/deploy-python-flask-app-on-heroku/

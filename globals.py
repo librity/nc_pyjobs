@@ -13,7 +13,7 @@ def init_debug():
 
 def init_quick():
   global QUICK
-  QUICK = False
+  QUICK = True
 
 
 def init_scrapes_path():

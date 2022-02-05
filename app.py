@@ -1,4 +1,3 @@
-import imp
 from flask import Flask, render_template, request, redirect, send_file
 
 
@@ -7,7 +6,7 @@ from scraper import scrape
 from save_to_csv import save_to_csv
 
 
-app = Flask("pyjobs")
+app = Flask(__name__)
 
 
 @app.route("/example/<name>")
@@ -57,9 +56,9 @@ def export_scrape():
 
 
 def bad_query(query):
-  if query is "":
+  if query == "":
     return True
-  if query is None:
+  if query == None:
     return True
 
   return False
