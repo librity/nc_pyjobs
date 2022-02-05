@@ -53,7 +53,7 @@ def get_page_jobs(query, page_number):
   url = build_url(query, LIMIT * page_number)
   log_debug(f"⛏️  Scrapping jobs from: {url}")
 
-  indeed_req = get(url)
+  indeed_req = get(url, headers=globals.DEFAULT_HEADERS)
 
   soup = BeautifulSoup(indeed_req.text, "html.parser")
   page_jobs = soup.find_all("a", {"class": "result"})

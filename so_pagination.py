@@ -7,7 +7,7 @@ from so import build_url
 
 
 def get_pagination_links(url):
-  so_req = get(url)
+  so_req = get(url, headers=globals.DEFAULT_HEADERS)
 
   soup = BeautifulSoup(so_req.text, "html.parser")
   pagination = soup.find("div", {"class": "s-pagination"})
