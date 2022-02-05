@@ -2,13 +2,13 @@ from requests import get
 from bs4 import BeautifulSoup
 
 
-import globals
+from globals import DEFAULT_HEADERS, QUICK
 from indeed import build_url
 from debug import log_debug
 
 
 def get_pagination_links(url):
-  indeed_req = get(url, headers=globals.DEFAULT_HEADERS)
+  indeed_req = get(url, headers=DEFAULT_HEADERS)
 
   soup = BeautifulSoup(indeed_req.text, "html.parser")
   pagination = soup.find("ul", {"class": "pagination-list"})
@@ -37,7 +37,7 @@ def extract_page_numbers(pagination_links):
 
 
 def get_last_page(query, start):
-  if globals.QUICK:
+  if QUICK:
     return 1
 
   url = build_url(query, start)

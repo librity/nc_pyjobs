@@ -1,7 +1,7 @@
 from requests import get
 from bs4 import BeautifulSoup
 
-import globals
+from globals import DEFAULT_HEADERS
 from indeed_pagination import get_last_page
 from indeed import BASE_URL, LIMIT, build_url
 from save_to_csv import save_to_csv
@@ -53,7 +53,7 @@ def get_page_jobs(query, page_number):
   url = build_url(query, LIMIT * page_number)
   log_debug(f"⛏️  Scrapping jobs from: {url}")
 
-  indeed_req = get(url, headers=globals.DEFAULT_HEADERS)
+  indeed_req = get(url, headers=DEFAULT_HEADERS)
 
   soup = BeautifulSoup(indeed_req.text, "html.parser")
   page_jobs = soup.find_all("a", {"class": "result"})

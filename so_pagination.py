@@ -2,12 +2,12 @@ from requests import get
 from bs4 import BeautifulSoup
 
 
-import globals
+from globals import DEFAULT_HEADERS, QUICK
 from so import build_url
 
 
 def get_pagination_links(url):
-  so_req = get(url, headers=globals.DEFAULT_HEADERS)
+  so_req = get(url, headers=DEFAULT_HEADERS)
 
   soup = BeautifulSoup(so_req.text, "html.parser")
   pagination = soup.find("div", {"class": "s-pagination"})
@@ -33,7 +33,7 @@ def extract_page_numbers(pagination_links):
 
 
 def get_last_page(query):
-  if globals.QUICK:
+  if QUICK:
     return 1
 
   url = build_url(query, 1)
