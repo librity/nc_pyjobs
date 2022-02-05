@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request, redirect, send_file
 
 
-import globals
 from scraper import scrape
 from save_to_csv import save_to_csv
 
 
 app = Flask(__name__)
+jobs_cache = {}
 
 
 @app.route("/example/<name>")
@@ -26,13 +26,13 @@ def scrapes():
     return redirect("/")
   query = query.lower()
 
-  cached_jobs = globals.jobs_cache.get(query)
+  cached_jobs = jobs_cache.get(query)
   if cached_jobs:
     job_count = len(cached_jobs)
     return render_template("scrapes.html", query=query, jobs=cached_jobs, job_count=job_count)
 
   scraped_jobs = scrape(query)
-  globals.jobs_cache[query] = scraped_jobs
+  jobs_cache[query] = scraped_jobs
   job_count = len(scraped_jobs)
   return render_template("scrapes.html", query=query, jobs=scraped_jobs, job_count=job_count)
 
@@ -44,13 +44,13 @@ def export_scrape():
     return redirect("/")
   query = query.lower()
 
-  cached_jobs = globals.jobs_cache.get(query)
+  cached_jobs = jobs_cache.get(query)
   if cached_jobs:
     filepath = save_to_csv(f"{query}_jobs", cached_jobs)
     return send_file(filepath)
 
   scraped_jobs = scrape(query)
-  globals.jobs_cache[query] = scraped_jobs
+  jobs_cache[query] = scraped_jobs
   filepath = save_to_csv(f"{query}_jobs", cached_jobs)
   return send_file(filepath)
 
