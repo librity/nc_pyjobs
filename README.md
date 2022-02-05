@@ -17,6 +17,7 @@
 
 A job scraper in Python.
 
+- Production App: https://pyjobs1776.herokuapp.com/
 - [Take the course too!](https://nomadcoders.co/python-for-beginners)
 - [Certificate of Completion](https://nomadcoders.co/certs/8cfa24cf-e9c3-4822-b2d2-aff68f3cbaa8)
 
@@ -26,7 +27,7 @@ A job scraper in Python.
 - [x] Scrape Stack Overflow jobs
 - [x] Save to `.csv`
 - [x] Scrape from Flask web app
-- [x] Deploy on Heroku
+- [ ] Deploy on Heroku
 - [ ] Run scrapes asynchronously
 
 ## Getting Started <a name = "getting_started"></a>
