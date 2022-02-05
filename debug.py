@@ -2,6 +2,6 @@ DEBUG = True
 
 
 def log_debug(message):
-  if globals.DEBUG:
+  if DEBUG:
     print("=== DEBUG ===")
     print(message)
