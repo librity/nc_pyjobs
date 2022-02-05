@@ -1,4 +1,4 @@
-import globals
+DEBUG = True
 
 
 def log_debug(message):

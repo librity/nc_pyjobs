@@ -1,13 +1,15 @@
 from csv import DictWriter
 
 
-import globals
 from utils import now
 from debug import log_debug
 
 
+SCRAPES_PATH = "./scrapes"
+
+
 def build_filepath(prefix):
-  return f"{globals.SCRAPES_PATH}/{prefix}_{now()}.csv"
+  return f"{SCRAPES_PATH}/{prefix}_{now()}.csv"
 
 
 def save_to_csv(prefix, jobs):

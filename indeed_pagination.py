@@ -8,7 +8,7 @@ from debug import log_debug
 
 
 def get_pagination_links(url):
-  indeed_req = get(url, headers=globals.DEFAULT_HEADERS)
+  indeed_req = get(url)
 
   soup = BeautifulSoup(indeed_req.text, "html.parser")
   pagination = soup.find("ul", {"class": "pagination-list"})

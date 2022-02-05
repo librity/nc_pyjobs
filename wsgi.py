@@ -2,10 +2,9 @@ import globals
 from app import app
 
 
-def main():
-  app.run()
+# def main():
 
 
 if __name__ == "__main__":
   globals.initialize()
-  main()
+  app.run()
