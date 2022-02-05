@@ -5,7 +5,7 @@ import globals
 from indeed_pagination import get_last_page
 from indeed import BASE_URL, LIMIT, build_url
 from save_to_csv import save_to_csv
-
+from debug import log_debug
 
 MAX_START = 900
 
@@ -51,7 +51,7 @@ def format_job(job):
 
 def get_page_jobs(query, page_number):
   url = build_url(query, LIMIT * page_number)
-  print(f"⛏️  Scrapping jobs from: {url}")
+  log_debug(f"⛏️  Scrapping jobs from: {url}")
 
   indeed_req = get(url, headers=globals.DEFAULT_HEADERS)
 
@@ -62,10 +62,10 @@ def get_page_jobs(query, page_number):
 
 
 def scrape(query):
-  print(f"🧑‍💻 Scrapping {BASE_URL} for {query} jobs")
+  log_debug(f"🧑‍💻 Scrapping {BASE_URL} for {query} jobs")
 
   last_page = get_last_page(query, MAX_START)
-  print(f"🔎 Found {last_page} page(s) of jobs")
+  log_debug(f"🔎 Found {last_page} page(s) of jobs")
 
   page_numbers = range(0, last_page)
   jobs = []

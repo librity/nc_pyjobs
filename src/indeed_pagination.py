@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 
 import globals
 from indeed import build_url
+from debug import log_debug
 
 
 def get_pagination_links(url):
@@ -29,7 +30,7 @@ def extract_page_numbers(pagination_links):
       page_numbers.append(page_number)
 
     except:
-      print(f"Couldn't parse page number from: \"{link}\"")
+      log_debug(f"Couldn't parse page number from: \"{link}\"")
       continue
 
   return page_numbers

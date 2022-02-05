@@ -3,6 +3,7 @@ from csv import DictWriter
 
 import globals
 from utils import now
+from debug import log_debug
 
 
 def build_filepath(prefix):
@@ -18,4 +19,5 @@ def save_to_csv(prefix, jobs):
     dict_writer.writeheader()
     dict_writer.writerows(jobs)
 
-  print(f"💾 Saved scrape results to {filepath}")
+  log_debug(f"💾 Saved scrape results to {filepath}")
+  return filepath
